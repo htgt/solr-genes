@@ -1,0 +1,9 @@
+<add>
+<doc>
+  <field name="id">1</field>
+  <field name="marker_symbol">Cbx1</field>
+  <field name="mgi_accession_id">MGI:9999</field>
+  <field name="dummy_comments">This is a comment</field>
+  <field name="dummy_field">This is a dummy field</field>
+</doc>
+</add>
