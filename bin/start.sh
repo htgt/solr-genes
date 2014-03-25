@@ -26,5 +26,4 @@ while getopts "p:h" opt; do
 done
 
 set -x
-#exec $JAVA_BIN -Dsolr.solr.home=multicore -Djetty.port=${PORT} -jar start.jar
 exec $JAVA_BIN -Dsolr.solr.home=solr -Djetty.port=${PORT} -jar start.jar
