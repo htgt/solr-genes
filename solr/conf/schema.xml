@@ -70,6 +70,13 @@
     <!-- The StrField type is not analyzed, but indexed/stored verbatim. -->
     <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
 
+    <fieldType name="string_ci" class="solr.TextField" sortMissingLast="true" omitNorms="true">
+        <analyzer type="query">
+            <tokenizer class="solr.KeywordTokenizerFactory"/>
+            <filter class="solr.LowerCaseFilterFactory"/>
+        </analyzer>
+    </fieldType>
+
     <!-- boolean type: "true" or "false" -->
     <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true"/>
     <!--Binary data type. The data should be sent/retrieved in as Base64 encoded Strings -->
@@ -895,11 +902,11 @@
 
    <!--<field name="id" type="string" indexed="true" stored="true" required="true" />-->
 
-   <field name="id" type="string" indexed="true" stored="true" required="true" />
-   <field name="symbol" type="string" indexed="true" stored="true" required="true" />
-   <field name="symbol_lc" type="string" indexed="true" stored="true" required="true" />
-   <field name="ensembl_id" type="string" indexed="true" stored="true" required="true" />
-   <field name="species" type="string" indexed="true" stored="true" required="true" />
+   <field name="id" type="string_ci" indexed="true" stored="true" required="true" />
+   <field name="symbol" type="string_ci" indexed="true" stored="true" required="true" />
+   <field name="symbol_lc" type="string_ci" indexed="true" stored="true" required="true" />
+   <field name="ensembl_id" type="string_ci" indexed="true" stored="true" required="true" />
+   <field name="species" type="string_ci" indexed="true" stored="true" required="true" />
 
   <field name="text" type="text_general" indexed="true" stored="false" multiValued="true"/>
 
