@@ -945,10 +945,9 @@
 	  destination field is to use the dynamic field syntax.
 	  copyField also supports a maxChars to copy setting.  -->
 
-   <!-- <copyField source="*_t" dest="text" maxChars="3000"/> -->
-
-   <!-- copy name to alphaNameSort, a field designed for sorting by name -->
-   <!-- <copyField source="name" dest="alphaNameSort"/> -->
+    <copyField source="symbol_lc" dest="text"/>
+    <copyField source="ensembl_id" dest="text"/>
+    <copyField source="id" dest="text"/>
 
 
  <!-- Similarity is the scoring routine for each document vs. a query.
