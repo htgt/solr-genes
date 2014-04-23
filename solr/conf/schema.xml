@@ -902,11 +902,13 @@
 
    <!--<field name="id" type="string" indexed="true" stored="true" required="true" />-->
 
-   <field name="id" type="string_ci" indexed="true" stored="true" required="true" />
-   <field name="symbol" type="string_ci" indexed="true" stored="true" required="true" />
-   <field name="symbol_lc" type="string_ci" indexed="true" stored="true" required="true" />
-   <field name="ensembl_id" type="string_ci" indexed="true" stored="true" required="true" />
-   <field name="species" type="string_ci" indexed="true" stored="true" required="true" />
+  <field name="id" type="string" indexed="true" stored="true" required="true" />
+  <field name="symbol" type="string_ci" indexed="true" stored="true" required="true" />
+  <field name="ensembl_id" type="string_ci" indexed="true" stored="true" required="true" />
+  <field name="species" type="string_ci" indexed="true" stored="true" required="true" />
+
+  <field name="design_count" type="int" indexed="false" stored="true" required="false" />
+  <field name="crispr_pairs_count" type="int" indexed="false" stored="true" required="false" />
 
   <field name="text" type="text_general" indexed="true" stored="false" multiValued="true"/>
 
@@ -945,7 +947,7 @@
 	  destination field is to use the dynamic field syntax.
 	  copyField also supports a maxChars to copy setting.  -->
 
-    <copyField source="symbol_lc" dest="text"/>
+    <copyField source="symbol" dest="text"/>
     <copyField source="ensembl_id" dest="text"/>
     <copyField source="id" dest="text"/>
 
