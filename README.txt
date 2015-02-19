@@ -49,3 +49,4 @@ speciy the solr.solr.home system property when starting jetty...
   java -Dsolr.solr.home=multicore -jar start.jar
   java -Dsolr.solr.home=example-DIH -jar start.jar
 
+
