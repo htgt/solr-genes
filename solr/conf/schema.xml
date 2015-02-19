@@ -906,9 +906,7 @@
   <field name="symbol" type="string_ci" indexed="true" stored="true" required="true" />
   <field name="ensembl_id" type="string_ci" indexed="true" stored="true" required="true" />
   <field name="species" type="string_ci" indexed="true" stored="true" required="true" />
-
-  <field name="design_count" type="int" indexed="false" stored="true" required="false" />
-  <field name="crispr_pairs_count" type="int" indexed="false" stored="true" required="false" />
+  <field name="chromosome" type="string" indexed="false" stored="true" required="true" />
 
   <field name="text" type="text_general" indexed="true" stored="false" multiValued="true"/>
 
